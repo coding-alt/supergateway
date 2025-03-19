@@ -1,4 +1,4 @@
-# SuperGateway Java 版本
+# SuperGateway 介绍
 
 这是一个将标准输入/输出（stdio）转换为服务器发送事件（SSE）的网关工具。它允许你运行基于 stdio 的 MCP（Model Context Protocol）服务器，并通过 SSE 进行远程访问。
 
@@ -45,7 +45,6 @@ java -jar target/supergateway-1.0.0.jar [选项]
 
 ## 使用示例
 
-1. stdio → SSE:
 ```bash
 java -jar target/supergateway-1.0.0.jar \
   --stdio "java -jar your-mcp-server.jar" \
@@ -53,13 +52,6 @@ java -jar target/supergateway-1.0.0.jar \
   --baseUrl http://localhost:8000 \
   --ssePath /sse \
   --messagePath /message
-```
-
-2. SSE → stdio:
-```bash
-java -jar target/supergateway-1.0.0.jar \
-  --sse "https://your-sse-server.com" \
-  --stdio "java -jar your-mcp-client.jar"
 ```
 
 ## API 接口
